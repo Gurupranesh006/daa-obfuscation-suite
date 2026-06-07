@@ -82,18 +82,6 @@ const Layout = () => {
               </Link>
             ))}
           </nav>
-          <div className="mt-auto p-3 border-t border-subtle flex flex-col gap-1">
-            {secondaryNav.map((item) => (
-              <a
-                key={item.name}
-                href={item.path}
-                className="flex items-center space-x-3 p-3 transition-transform active:scale-95 text-on-surface-variant hover:bg-surface-container-highest hover:text-on-surface rounded transition-all duration-150"
-              >
-                <span className="material-symbols-outlined">{item.icon}</span>
-                <span className="font-label-caps text-label-caps">{item.name}</span>
-              </a>
-            ))}
-          </div>
         </aside>
 
         {/* Main Content */}
@@ -101,15 +89,6 @@ const Layout = () => {
           <Outlet />
         </main>
       </div>
-
-      {/* Footer */}
-      <footer className="w-full py-4 px-6 flex justify-between items-center bg-surface-container-lowest border-t border-subtle md:pl-[280px]">
-        <div className="flex gap-4 font-label-caps text-label-caps text-on-surface-variant">
-          <a className="hover:text-secondary transition-colors" href="#">Terms</a>
-          <a className="hover:text-secondary transition-colors" href="#">Privacy</a>
-          <a className="hover:text-secondary transition-colors" href="#">Repository</a>
-        </div>
-      </footer>
     </div>
   );
 };
