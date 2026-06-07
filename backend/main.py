@@ -208,5 +208,50 @@ def align_sequences(req: AlignmentRequest):
         "matrix": dp if m < 30 and n < 30 else None # Increased limit for instructions
     }
 
+class RERequest(BaseModel):
+    code: str
+    pattern: str
+
+# --- Helpers ---
+
+def kmp_search(text: str, pattern: str):
+    # DAA Algorithm: Knuth-Morris-Pratt O(N + M)
+    m, n = len(pattern), len(text)
+    if m == 0: return []
+    
+    # Precompute PI table
+    pi = [0] * m
+    j = 0
+    for i in range(1, m):
+        while j > 0 and pattern[i] != pattern[j]:
+            j = pi[j-1]
+        if pattern[i] == pattern[j]:
+            j += 1
+        pi[i] = j
+        
+    # Search
+    matches = []
+    j = 0
+    for i in range(n):
+        while j > 0 and text[i] != pattern[j]:
+            j = pi[j-1]
+        if text[i] == pattern[j]:
+            j += 1
+        if j == m:
+            matches.append(i - m + 1)
+            j = pi[j-1]
+    return matches
+
+# --- Endpoints ---
+@app.post("/api/re/analyze")
+def analyze_re(req: RERequest):
+    matches = kmp_search(req.code, req.pattern)
+    return {
+        "matches": matches,
+        "count": len(matches),
+        "algorithm": "Knuth-Morris-Pratt",
+        "complexity": "O(N + M)"
+    }
+
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)

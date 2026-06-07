@@ -10,6 +10,7 @@ const Layout = () => {
     { name: 'Polymorphic Detection', path: '/poly', icon: 'security' },
     { name: 'AST Simplifier', path: '/ast', icon: 'code' },
     { name: 'Entropy Scanner', path: '/entropy', icon: 'analytics' },
+    { name: 'Reverse Engineering', path: '/re', icon: 'settings_backup_restore' },
   ];
 
   const secondaryNav = [

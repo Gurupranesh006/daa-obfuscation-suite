@@ -7,7 +7,8 @@ const modules = [
   { title: 'CFG Visualizer', path: '/cfg', complexity: 'O(V+E)', color: 'text-secondary', icon: 'account_tree' },
   { title: 'Poly Alignment', path: '/poly', complexity: 'O(M*N)', color: 'text-warning-amber', icon: 'security' },
   { title: 'AST Simplifier', path: '/ast', complexity: 'O(V)', color: 'text-alert-red', icon: 'code' },
-  { title: 'Entropy Scanner', path: '/entropy', complexity: 'O(N)', color: 'text-tertiary', icon: 'analytics' }
+  { title: 'Entropy Scanner', path: '/entropy', complexity: 'O(N)', color: 'text-tertiary', icon: 'analytics' },
+  { title: 'Reverse Engineering', path: '/re', complexity: 'O(N+M)', color: 'text-secondary', icon: 'settings_backup_restore' }
 ];
 
 const Dashboard = () => {

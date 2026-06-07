@@ -5,6 +5,7 @@ import CFGView from './pages/CFGView';
 import PolyView from './pages/PolyView';
 import ASTView from './pages/ASTView';
 import EntropyView from './pages/EntropyView';
+import ReverseView from './pages/ReverseView';
 import { CodeProvider } from './context/CodeContext';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route path="poly" element={<PolyView />} />
             <Route path="ast" element={<ASTView />} />
             <Route path="entropy" element={<EntropyView />} />
+            <Route path="re" element={<ReverseView />} />
           </Route>
         </Routes>
       </BrowserRouter>
