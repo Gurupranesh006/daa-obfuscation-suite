@@ -1,0 +1,14 @@
+# Node
+node_modules/
+dist/
+.DS_Store
+
+# Python
+backend/venv/
+__pycache__/
+*.pyc
+
+# Project specific
+stitch_screens/*.html
+download_html.py
+fetch_stitch.py

@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --color-secondary-fixed-dim: #7bd0ff;
+  --color-primary-container: #0f172a;
+  --color-primary: #bec6e0;
+  --color-on-background: #d4e4fa;
+  --color-on-secondary-fixed: #001e2c;
+  --color-inverse-primary: #565e74;
+  --color-tertiary-fixed-dim: #4ae176;
+  --color-secondary-container: #00a6e0;
+  --color-warning-amber: #f59e0b;
+  --color-error: #ffb4ab;
+  --color-on-primary: #283044;
+  --color-tertiary: #4ae176;
+  --color-inverse-on-surface: #233143;
+  --color-primary-fixed-dim: #bec6e0;
+  --color-outline: #909097;
+  --color-surface-dim: #051424;
+  --color-border-subtle: #1e293b;
+  --color-inverse-surface: #d4e4fa;
+  --color-alert-red: #ef4444;
+  --color-on-secondary: #00354a;
+  --color-on-tertiary-fixed: #002109;
+  --color-on-secondary-fixed-variant: #004c69;
+  --color-on-error-container: #ffdad6;
+  --color-secondary-fixed: #c4e7ff;
+  --color-on-secondary-container: #00374d;
+  --color-surface-bright: #2c3a4c;
+  --color-on-surface: #d4e4fa;
+  --color-tertiary-container: #001d07;
+  --color-secondary: #7bd0ff;
+  --color-surface-container-low: #0d1c2d;
+  --color-error-container: #93000a;
+  --color-surface-container-high: #1c2b3c;
+  --color-surface-container-highest: #273647;
+  --color-outline-variant: #45464d;
+  --color-on-primary-fixed-variant: #3f465c;
+  --color-background: #051424;
+  --color-on-tertiary: #003915;
+  --color-bg-deep: #020617;
+  --color-surface-variant: #273647;
+  --color-surface-container: #122131;
+  --color-surface-tint: #bec6e0;
+  --color-on-tertiary-fixed-variant: #005321;
+  --color-primary-fixed: #dae2fd;
+  --color-on-surface-variant: #c6c6cd;
+  --color-on-primary-container: #798098;
+  --color-tertiary-fixed: #6bff8f;
+  --color-surface-container-lowest: #010f1f;
+  --color-on-error: #690005;
+  --color-surface: #051424;
+  --color-on-primary-fixed: #131b2e;
+  --color-on-tertiary-container: #009542;
+  
+  --font-code-md: "JetBrains Mono";
+  --font-label-caps: "JetBrains Mono";
+  --font-headline-md: "Inter";
+  --font-headline-sm: "Inter";
+  --font-body-md: "Inter";
+  --font-headline-lg: "Inter";
+  --font-code-sm: "JetBrains Mono";
+  --font-body-lg: "Inter";
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-background font-body-md;
+  }
+}
